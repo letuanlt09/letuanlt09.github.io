@@ -1,2 +1,11 @@
-#navbarNav {
+.container {
+  position: relative;
+  top: 100px;
+}
+
+.hidden {
+  display: none;
+}
+.profileContainer {
+  align-items: center;
 }

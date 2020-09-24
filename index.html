@@ -15,6 +15,10 @@
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css"
+    />
     <link rel="stylesheet" type="text/css" href="style.css" />
     <title>Tuan Le's Personal Website</title>
     <script src="jquery.js"></script>
@@ -31,30 +35,167 @@
           aria-controls="navbarNav"
           aria-expanded="false"
           aria-label="Toggle navigation"
+          onclick="test()"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item active">
-              <a class="nav-link" href="#"
-                >About Myself <span class="sr-only">(current)</span></a
+              <a class="nav-link" href="#" onclick="return aboutClick()"
+                >About</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="project.html">Project</a>
+              <a class="nav-link" href="#" onclick="return projectClick()"
+                >Project</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Work</a>
+              <a class="nav-link" href="#" onclick="return workClick()">Work</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">CV</a>
+              <a class="nav-link" href="#" onclick="return resumeClick()">CV</a>
             </li>
           </ul>
         </div>
       </nav>
     </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <div id="profileContainer">
+            <img
+              src="profileImg.jpg"
+              class="rounded-circle"
+              width="100"
+              height="100"
+            />
+            <h5>Tuan Le</h5>
+          </div>
 
+          <p>CS student at University of Florida</p>
+          <div class="row">
+            <svg
+              width="1em"
+              height="1em"
+              viewBox="0 0 16 16"
+              class="bi bi-geo-fill"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999zm2.493 8.574a.5.5 0 0 1-.411.575c-.712.118-1.28.295-1.655.493a1.319 1.319 0 0 0-.37.265.301.301 0 0 0-.057.09V14l.002.008a.147.147 0 0 0 .016.033.617.617 0 0 0 .145.15c.165.13.435.27.813.395.751.25 1.82.414 3.024.414s2.273-.163 3.024-.414c.378-.126.648-.265.813-.395a.619.619 0 0 0 .146-.15.148.148 0 0 0 .015-.033L12 14v-.004a.301.301 0 0 0-.057-.09 1.318 1.318 0 0 0-.37-.264c-.376-.198-.943-.375-1.655-.493a.5.5 0 1 1 .164-.986c.77.127 1.452.328 1.957.594C12.5 13 13 13.4 13 14c0 .426-.26.752-.544.977-.29.228-.68.413-1.116.558-.878.293-2.059.465-3.34.465-1.281 0-2.462-.172-3.34-.465-.436-.145-.826-.33-1.116-.558C3.26 14.752 3 14.426 3 14c0-.599.5-1 .961-1.243.505-.266 1.187-.467 1.957-.594a.5.5 0 0 1 .575.411z"
+              />
+            </svg>
+            <a
+              href="https://www.google.com/maps/place/Gainesville,+FL/@29.6862521,-82.389786,12z/data=!3m1!4b1!4m5!3m4!1s0x88e6202169bf2c2b:0x80e7795d28108d96!8m2!3d29.6516344!4d-82.3248262"
+              target="_blank"
+              style="margin-left: 15px"
+              >Gainesville, FL</a
+            >
+          </div>
+          <div class="row">
+            <svg
+              width="1em"
+              height="1em"
+              viewBox="0 0 16 16"
+              class="bi bi-envelope-fill"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z"
+              />
+            </svg>
+            <a href="mailto: letuanlt09@gmail.com" style="margin-left: 15px"
+              >letuanlt09@gmail.com</a
+            >
+          </div>
+          <div class="row">
+            <i class="fa fa-linkedin-square" style="font-size: 24px"></i>
+            <a
+              href="https://www.linkedin.com/in/tuan-le-uf/"
+              target="_blank"
+              style="margin-left: 10px"
+              >LinkedIn</a
+            >
+          </div>
+          <div class="row">
+            <i class="fa fa-github" style="font-size: 24px"></i>
+            <a
+              href="https://github.com/letuanlt09"
+              target="_blank"
+              style="margin-left: 10px"
+              >GitHub</a
+            >
+          </div>
+        </div>
+        <div id="aboutContainer" class="col-lg-8">
+          <h4>About</h4>
+          <p>
+            I am a last year student at University of Florida and persue BS in
+            Computer Science.
+          </p>
+          <p>
+            I worked at Enfoglobe for 3 month as an intern. I used C# to develop
+            a puzzle model for an education program. I also interned at Amazon.
+            Here I developed a brand new project. The project is about an
+            internal tool that is used an business team. For this tool I used
+            Java, Jquery, JSP, ... to build it.
+          </p>
+          <p>
+            I am going to graduate in December 2020. I am looking for a fulltime
+            position.
+          </p>
+        </div>
+        <div id="projectContainer" class="col-lg-8 hidden">
+          <h4>Project</h4>
+          <a href="https://github.com/letuanlt09/GatorRider"
+            ><h6>Gator Rider App</h6></a
+          >
+
+          <p>
+            This is my senior project. The app helps UF student to find a car
+            pool ride much easier and faster then conventional Facebook page.The
+            app is bulded on Spring, Azure, React, Jquery.
+          </p>
+        </div>
+        <div id="workContainer" class="col-lg-8 hidden">
+          <h4>Work</h4>
+          <h6>Amazon.com, Inc</h6>
+          <i>SDE Intern</i>
+
+          <p>
+            I worked for Amazon in Summer 2020. I developed a tool that is for
+            internal use. The tool is build on Spring MVC, Amazon UI, JSP,
+            JQuery.
+          </p>
+          <h6>Enfoglobe LLC</h6>
+          <i>Software Engineer Intern</i>
+
+          <p>
+            I interned for this company for 3 months in Spring 2019. Here I
+            developed a puzzle module for an education project. I used Unity
+            with C# to code.
+          </p>
+          <h6>Broward College</h6>
+          <i>Math Tutor</i>
+
+          <p>
+            I helped other students with their math problems. I tutored upto
+            Calculus III and Trigonometric.
+          </p>
+        </div>
+        <div id="resumeContainer" class="col-lg-8 hidden">
+          <h4>Resume</h4>
+          <embed src="resume.pdf" width="800px" height="1100px" />
+          <a target="_blank" href="resume.pdf" title="TuanLeResume">Download</a>
+        </div>
+      </div>
+    </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script
